@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SAH | Edição Reajuste Trabalhador</title>
+</head>
+<body>
+    <div id="central">
+        <header>
+            <img src="./img/rp-img.png" alt="img-registroponto" srcset="">
+            <h1>Sistema de Registro de Ponto</h1>
+        </header>
+
+        <div id="insere-ajuste">
+            <div class="info-insere-ajuste">
+                <div class="info-user">
+                    <p>Usuário:</p>
+                    <span>Fulano de Tal</span>
+                </div>
+                <div class="info-profile">
+                    <p>Perfil:</p>
+                    <span>Trabalhador</span>
+                </div>
+            </div>
+            <!--info-insere-ajuste-->
+        </div>
+        <!--insere-ajuste-->
+
+        <div id="menu-insere-ajuste">
+            <div>
+                <a href="insereAjuste.html"><p>Inserir</p></a>
+            </div>
+            <div>
+                <a href="#"><p>Editar</p></a>
+            </div>
+            <div>
+                <a href="#"><p>Visualizar</p></a>
+            </div>            
+        </div>
+        <!--menu-insere-ajuste-->
+
+        <div id="form-edicao-reajuste" class="form">
+                <table>
+                    <h3>Consulta</h3>
+                    <th>Data Entrada:</th>
+                    <th>Data Saída:</th>
+                    <th>Justificativa:</th>
+                    <tr>
+                        <td><input type="date" name="data" id="input-data" required></td>
+                        <td><input type="date" name="data" id="input-data" required></td>
+                        <td><select name="select-justify" id="select-justify" required>
+                            <option value="Prod. Conteudo">Prod. Conteúdo</option>
+                            <option value="Versionamento">Versionamento</option>
+                            <option value="Capacitacao">Capacitação</option>
+                            <option value="Emprestimo">Empréstimo</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td><input id="btn-consultar" class="btn" type="submit" value="Consultar"></td>
+                    </tr>
+                </table>
+
+                
+                <table id="table-info-insere-horas">
+                    <h3>Lista de Horas</h3>                    
+                        <th>Data</th>
+                        <th>Hora Entrada</th>
+                        <th>Hora Saída</th>
+                        <th>Total Horas</th>
+                        <th>Justificativa</th>
+                        <th>Opções</th>
+                    <tr>
+                        <td><input type="date" name="" id="" required></td>
+                        <td><input type="time" name="hora-entrada" id="input-he-lh" required></td>
+                        <td><input type="time" name="hora-saida" id="input-hs-lh" required></td>
+                        <td>4</td>
+                        <td><select name="select-justify" id="select-justify" required>
+                            <option value="Prod. Conteudo">Prod. Conteúdo</option>
+                            <option value="Versionamento">Versionamento</option>
+                            <option value="Capacitacao">Capacitação</option>
+                            <option value="Emprestimo">Empréstimo</option>
+                        </select></td>
+                        <td class="icon-opcoes"><img src="./img/u208.png" alt="" srcset="">
+                            <img src="./img/u226.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="" id="" required></td>
+                        <td><input type="time" name="hora-entrada" id="input-he-lh" required></td>
+                        <td><input type="time" name="hora-saida" id="input-hs-lh" required></td>
+                        <td>4</td>
+                        <td><select name="select-justify" id="select-justify" required>
+                            <option value="Prod. Conteudo">Prod. Conteúdo</option>
+                            <option value="Versionamento">Versionamento</option>
+                            <option value="Capacitacao">Capacitação</option>
+                            <option value="Emprestimo">Empréstimo</option>
+                        </select></td>
+                        <td class="icon-opcoes"><img src="./img/u208.png" alt="" srcset="">
+                            <img src="./img/u226.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="" id="" required></td>
+                        <td><input type="time" name="hora-entrada" id="input-he-lh" required></td>
+                        <td><input type="time" name="hora-saida" id="input-hs-lh" required></td>
+                        <td>2</td>
+                        <td><select name="select-justify" id="select-justify" required>
+                            <option value="Prod. Conteudo">Prod. Conteúdo</option>
+                            <option value="Versionamento">Versionamento</option>
+                            <option value="Capacitacao">Capacitação</option>
+                            <option value="Emprestimo">Empréstimo</option>
+                        </select></td>
+                        <td class="icon-opcoes"><img src="./img/u208.png" alt="" srcset="">
+                            <img src="./img/u226.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="" id="" required></td>
+                        <td><input type="time" name="hora-entrada" id="input-he-lh" required></td>
+                        <td><input type="time" name="hora-saida" id="input-hs-lh" required></td>
+                        <td>10</td>
+                        <td><select name="select-justify" id="select-justify" required>
+                            <option value="Prod. Conteudo">Prod. Conteúdo</option>
+                            <option value="Versionamento">Versionamento</option>
+                            <option value="Capacitacao">Capacitação</option>
+                            <option value="Emprestimo">Empréstimo</option>
+                        </select></td>
+                        <td class="icon-opcoes"><img src="./img/u208.png" alt="" srcset="">
+                        <img src="./img/u226.png" alt=""></td>
+                    </tr>
+                </table>
+                <!--table-info-insere-horas-->
+
+                <table class="legenda">
+                    <h3>Legenda</h3>
+                    <tr>
+                        <td><img src="./img/u208.png" alt="" srcset=""> Editar</td>
+                        <td><img src="./img/u226.png" alt=""> Excluir</td>
+                    </tr>
+                    <tr>
+                        <td id="td-btn-voltar"><input id="btn-voltar" class="btn" type="submit" value="Voltar"></td>
+                        <td id="td-btn-env-analise"><input id="btn-env-analise" class="btn" type="submit" value="Enviar para Análise"></td>
+                    </tr>
+                </table>
+                <!--legenda-->
+        </div>
+        <!--form-edicao-reajuste-->
+
+
+    </div>
+    <!--central-->
+</body>
+</html>
