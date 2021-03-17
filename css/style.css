@@ -22,6 +22,10 @@ a{
     font-weight: 600;
 }
 
+.legenda{
+    background: none !important;
+}
+
 /*Section Home/Index*/
 #central{
     width: 80vw;
@@ -253,12 +257,9 @@ input{
     width: 19px;
 }
 
-.legenda{
-    width: 450px !important;
-    height: 80px !important;
-    margin-left: 119px !important;
-    padding: 30px !important;
-    background: none !important;
+#legenda-insere-ajuste th{
+    width: 50px;
+
 }
 
 #td-btn-voltar, #td-btn-env-analise{
@@ -304,28 +305,20 @@ input{
     text-align: center;
 }
 
+#legenda-visualiza-reajuste img{
+    margin-left: 20px;
+}
+
 /*Seleciona Perfil*/
 
-#insere-ajuste{
-    justify-content: flex-start;
+#form-seleciona-perfil{
+    height: 400px;
+    text-align: left;
 }
 
-.info-user p{
-    font-weight: bold;
+#form-seleciona-perfil select{
+    width: 300px;
 }
-
-.info-user span{
-    margin-left: 5px;
-}
-
-.form{
-    height: 50%;
-}
-
-.form table select{
-    width: 500px;
-}
-
 
 
 @media screen and (max-width: 1251px){
