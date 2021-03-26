@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Sistema de Ajuste de Ponto</title>
+    <script src="js/js.js" defer></script>
 </head>
 <body>
     <div id="central">
@@ -15,16 +16,18 @@
         </header>
 
         <div id="form-index">
-            <form>
+            <form name="formulario">
                 <h2>Realize o login para efetuar o acesso ao Sistema de Registro de Ponto</h2>
                 <div class="input-container">
                     <span>E-mail*</span>
-                    <input type="text" name="email" required>
+                    <input type="email" name="email" required>
+                    <span class="error"></span>
                 </div>
                 <!--input-container-->
                 <div class="input-container">
                     <span>Senha*</span>
                     <input type="password" name="senha" required>
+                    <span class="error"></span>
                 </div>
                 <!--input-container-->
                 <a href="#"><span>Esqueceu sua senha?</span></a>

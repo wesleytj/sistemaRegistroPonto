@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>SAH - Insere Ajuste</title>
+    <script src="js/js.js" defer></script>
 </head>
 <body>
     <div id="central">
@@ -49,10 +50,11 @@
                     <th>Hora Entrada:</th>
                     <th>Hora Saída:</th>
                     <th>Justificativa:</th>
+                    <form action="" name="formulario">
                     <tr>
                         <td><input type="date" name="data" id="input-data" required></td>
-                        <td><input type="time" name="hora-entrada" id="input-he" required></td>
-                        <td><input type="time" name="hora-saia" id="input-hs" required></td>
+                        <td><input type="time" name="horaEntrada" id="input-he" required></td>
+                        <td><input type="time" name="horaSaida" id="input-hs" required></td>
                         <td><select name="select-justify" id="select-justify" required>
                             <option value="Prod. Conteudo">Prod. Conteúdo</option>
                             <option value="Versionamento">Versionamento</option>
@@ -61,8 +63,9 @@
                         </select></td>
                     </tr>
                     <tr>
-                        <td><input id="btn-insere-hora" class="btn" type="submit" value="Insere Hora"></td>
+                        <td><input onclick="verifyTime()" id="btn-insere-hora" class="btn" type="submit" value="Insere Hora"></td>
                     </tr>
+                </form>
                 </table>
 
                 
@@ -74,10 +77,11 @@
                         <th>Total Horas</th>
                         <th>Justificativa</th>
                         <th>Opções</th>
+                        <form action="">
                     <tr>
-                        <td><input type="date" name="" id="" required></td>
-                        <td><input type="time" name="hora-entrada" id="input-he-lh" required></td>
-                        <td><input type="time" name="hora-saida" id="input-hs-lh" required></td>
+                        <td><input type="date" name="data" id="" required></td>
+                        <td><input type="time" name="horaEntrada" id="input-he-lh" required></td>
+                        <td><input type="time" name="horaSaida" id="input-hs-lh" required></td>
                         <td>4</td>
                         <td><select name="select-justify" id="select-justify" required>
                             <option value="Prod. Conteudo">Prod. Conteúdo</option>
@@ -89,9 +93,9 @@
                             <img src="./img/u226.png" alt=""></td>
                     </tr>
                     <tr>
-                        <td><input type="date" name="" id="" required></td>
-                        <td><input type="time" name="hora-entrada" id="input-he-lh" required></td>
-                        <td><input type="time" name="hora-saida" id="input-hs-lh" required></td>
+                        <td><input type="date" name="data" id="" required></td>
+                        <td><input type="time" name="horaEntrada" id="input-he-lh" required></td>
+                        <td><input type="time" name="horaSaida" id="input-hs-lh" required></td>
                         <td>4</td>
                         <td><select name="select-justify" id="select-justify" required>
                             <option value="Prod. Conteudo">Prod. Conteúdo</option>
@@ -103,9 +107,9 @@
                             <img src="./img/u226.png" alt=""></td>
                     </tr>
                     <tr>
-                        <td><input type="date" name="" id="" required></td>
-                        <td><input type="time" name="hora-entrada" id="input-he-lh" required></td>
-                        <td><input type="time" name="hora-saida" id="input-hs-lh" required></td>
+                        <td><input type="date" name="data" id="" required></td>
+                        <td><input type="time" name="horaEntrada" id="input-he-lh" required></td>
+                        <td><input type="time" name="horaSaida" id="input-hs-lh" required></td>
                         <td>2</td>
                         <td><select name="select-justify" id="select-justify" required>
                             <option value="Prod. Conteudo">Prod. Conteúdo</option>
@@ -117,9 +121,9 @@
                             <img src="./img/u226.png" alt=""></td>
                     </tr>
                     <tr>
-                        <td><input type="date" name="" id="" required></td>
-                        <td><input type="time" name="hora-entrada" id="input-he-lh" required></td>
-                        <td><input type="time" name="hora-saida" id="input-hs-lh" required></td>
+                        <td><input type="date" name="data" id="" required></td>
+                        <td><input type="time" name="horaEntrada" id="input-he-lh" required></td>
+                        <td><input type="time" name="horaSaida" id="input-hs-lh" required></td>
                         <td>10</td>
                         <td><select name="select-justify" id="select-justify" required>
                             <option value="Prod. Conteudo">Prod. Conteúdo</option>
@@ -141,6 +145,7 @@
                     <tr>
                         <td id="td-btn-voltar"><input id="btn-voltar" class="btn" type="submit" value="Voltar"><input id="btn-env-analise" class="btn" type="submit" value="Enviar para Análise"></td>
                     </tr>
+                </form>
                 </table>
                 <!--legenda-insere-ajuste--><!--legenda-->
         </div>
