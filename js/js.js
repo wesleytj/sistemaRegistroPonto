@@ -1,20 +1,28 @@
-const fields = document.querySelectorAll("[required]")
-const spanError = document.querySelector("span.validation")
-const email = document.getElementById('email')
-const password = document.getElementById('password')
-const subLogin = document.getElementById('sub-login')
+const fields = document.querySelectorAll("[required]");
+const subLogin = document.getElementById('sub-login');
+const spanError = document.querySelector("span.validation");
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const confEmail = document.getElementById('conf-email');
 
 /*Verfica se os campos estão vazios*/
-function validationForm(){
+function validationForm(){        
+    let erroEmailCad = document.getElementById('erroCad') 
     email.addEventListener("blur", () => {
         //Se desfocar com campo vazio
         if (email.value == '') {
             //ativa o alerta
             spanError.classList.add("alert", "error")
-            spanError.innerHTML = 'O campo "email" é de preenchimento obrigatório!'
+            spanError.innerHTML = 'O campo "email" é de preenchimento obrigatório!'           
+
             //adiciona classe de focus com erro
             email.classList.add('focusError')
             email.focus()
+
+            /*>>> Pagina Cadastre-se <<<*/
+            if(erroEmailCad.classList.contains("alert")){
+                email.placeholder = 'Campo Obrigatório';
+            }
         }
         //Se desfocar com campo preenchido
         else if (email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || email.value.indexOf(".") - email.value.indexOf("@") == 1 || (email.value.length - 1) == email.value.indexOf(".")) {
@@ -35,10 +43,46 @@ function validationForm(){
     })
     email.addEventListener("focus", () => {
         //Se focar com campo preenchido
-        if (email.value != '') {
+        if (email.value == '' || email.value != '') {
             //adiciona classe focus
             email.classList.add('focus')
             email.classList.remove('blur')
+        }
+    })
+
+    confEmail.addEventListener("blur", () => {
+        //Se desfocar com campo vazio
+        if (confEmail.value == '') {                  
+
+            //adiciona classe de focus com erro
+            confEmail.classList.add('focusError')
+            confEmail.focus()
+            confEmail.placeholder = 'Campo Obrigatório';
+            
+        }
+        //Se desfocar com campo preenchido
+        else if (confEmail.value.indexOf("@") == -1 || confEmail.value.indexOf(".") == -1 || confEmail.value.indexOf(".") - confEmail.value.indexOf("@") == 1 || (confEmail.value.length - 1) == confEmail.value.indexOf(".")) {
+            //ativa o alerta
+            spanError.classList.add("alert", "error")
+            spanError.innerHTML = 'Informe um e-mail válido'
+            //adiciona classe de focus com erro
+            confEmail.classList.add('focusError')
+            confEmail.focus()        
+        }else {
+            //Input fica normal, sem box-shadow nenhum
+            confEmail.classList.add('blur')
+            confEmail.classList.remove('focusError')
+            //Remove os alertas
+            spanError.classList.remove("alert", "error")
+            spanError.innerHTML = ''
+        }
+    })
+    confEmail.addEventListener("focus", () => {
+        //Se focar com campo preenchido
+        if (confEmail.value == '' || confEmail.value != '') {
+            //adiciona classe focus
+            confEmail.classList.add('focus')
+            confEmail.classList.remove('blur')
         }
     })
     
@@ -51,6 +95,11 @@ function validationForm(){
             //adiciona classe de focus com erro
             password.classList.add('focusError')
             password.focus()
+
+            /*>>> Pagina Cadastre-se <<< */
+            if(erroEmailCad.classList.contains("alert")){
+                password.placeholder = 'Campo Obrigatório';
+            }
         }
         //Se desfocar com campo preenchido
         else if (password.value.length < 6){
@@ -71,7 +120,7 @@ function validationForm(){
     })
     password.addEventListener("focus", () => {
         //Se focar com campo preenchido
-        if (password.value != '') {
+        if (password.value == '' || password.value != '') {
             //adiciona classe focus
             password.classList.add('focus')
             password.classList.remove('blur')
@@ -79,6 +128,25 @@ function validationForm(){
     })
 }
 
+function comparaEmail(){
+    const confEmail = document.getElementById('conf-email')
+    const erroCad = document.getElementById('erroCad')
+
+    confEmail.addEventListener("blur", () => {        
+        if(email.value != confEmail.value){
+            let formCadLogin = document.getElementById('form-cad-login')
+            formCadLogin.style.height = '60%'            
+            erroCad.style.display = 'block' 
+            erroCad.innerHTML = 'Os e-mails não conferem'
+            erroCad.classList.add("alert", "error")
+            erroCad.style.margin = '0'
+            erroCad.style.fontSize = '12px'
+        }
+    })
+    
+}
+
+comparaEmail();
 validationForm();
 
 subLogin.addEventListener('click', (event) => {
@@ -90,6 +158,9 @@ subLogin.addEventListener('click', (event) => {
         spanError.innerHTML = 'O preenchimento dos campos é Obrigatório!'
         email.focus()
     }
+
+    comparaEmail();
+    validationForm();
 })
 
 //Verificando Horário

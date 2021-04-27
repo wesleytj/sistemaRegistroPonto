@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous">
+    <title>Cadastra-se no SRP</title>
+    <script src="js/js.js" defer></script>
+</head>
+
+<body id="bCadastrase">
+    <title>
+        Preencha o formulário
+    </title>
+    <form id="form-cadastrese" action="">        
+        <div id="form-cad-dp">
+            <h2>Dados Pessoais</h2>
+            <p>Nome</p>
+            <input type="text" name="nome" id="inp-nome-cad">
+            <p>Sobrenome</p>
+            <input type="text" name="sobrenome" id="inp-sobrenome-cad">
+            <p>CPF</p>
+            <input type="text" name="cpf" id="cpf" maxlength="14">
+        </div>
+
+        <div id="form-cad-login">
+            <h2>Dados de Login</h2>
+            <span id="erroCad" class="validation"></span>
+            <p>E-mail</p>
+            <input type="email" name="email" id="email" class="eC" required>
+            <p>Confirme seu e-mail</p>
+            <input type="email" name="conf-email" id="conf-email" required>
+            <p>Senha</p>
+            <input type="password" name="senha" id="password" required>
+            <p>Confirme sua Senha</p>
+            <input type="password" name="conf-senha" id="inp-conf-senha-cad" required>
+            <button id="sub-login" class="sub-login-cad" type="submit">Cadastrar</button>
+        </div>
+    </form>
+</body>
+
+</html>
